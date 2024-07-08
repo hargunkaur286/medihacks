@@ -7,6 +7,8 @@ import icons2 from "../assets/images/icon02.png"
 import icons3 from "../assets/images/icon03.png"
 import {Link} from 'react-router-dom'
 import { BiRightArrowAlt } from "react-icons/bi";
+import About from '../components/About/About'
+
 const Home = () => {
   return (
     <>
@@ -152,6 +154,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <About />
     </>
   )
 }
