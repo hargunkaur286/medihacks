@@ -8,6 +8,7 @@ import icons3 from "../assets/images/icon03.png"
 import {Link} from 'react-router-dom'
 import { BiRightArrowAlt } from "react-icons/bi";
 import About from '../components/About/About'
+import ServiceList from '../components/Services/ServiceList'
 
 const Home = () => {
   return (
@@ -156,6 +157,23 @@ const Home = () => {
       </section>
 
       <About />
+
+      <section>
+        <div className="container">
+          <div className='xl:w-[470px] mx-auto'>
+            <h2 className='heading text-center'>
+              Our medical Services
+            </h2>
+            <p className='text__para text-center'>
+              World-class care for every mother. Our health system offers unmatched, expert health care.
+            </p>
+          </div>
+        </div>
+        
+        <ServiceList />
+
+
+      </section>
     </>
   )
 }

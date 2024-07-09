@@ -1,4 +1,4 @@
-export const services = [
+const services = [
     {
       name: "Cancer Care",
       desc: "World-class care for everyone. Our health System offers unmatched, expert health care. From the lab to the clinic.",
@@ -36,3 +36,5 @@ export const services = [
       textColor: "#9771FF",
     },
   ];
+
+export default services
