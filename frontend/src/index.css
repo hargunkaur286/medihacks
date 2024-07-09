@@ -22,7 +22,7 @@
     }
 
     .text__para{
-        @apply text-[18px] leading-[18px] font-[400] text-textColor mt-[18px]
+        @apply text-[18px] leading-[28px] font-[400] text-textColor mt-[18px]
     }
 
     .header{
