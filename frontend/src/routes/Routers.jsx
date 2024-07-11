@@ -8,6 +8,7 @@ import Doctors from '../pages/Doctors/Doctors'
 import DoctorDetails from '../pages/Doctors/DoctorDetails'
 
 import {Routes, Route} from 'react-router-dom'
+import ChatApp from '../pages/ChatApp'
 
 const Routers = () => {
   return (
@@ -20,6 +21,7 @@ const Routers = () => {
       <Route path="/register" element = {<Signup/>} />
       <Route path="/contact" element = {<Contact/>} />
       <Route path="/services" element = {<Services/>} />
+      <Route path="/chat" element = {<ChatApp/>} />
     </Routes>
   )
 }

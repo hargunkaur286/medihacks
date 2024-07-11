@@ -3,13 +3,13 @@ import React, {useState} from 'react'
 const Chatbot = () => {
     const [error, setError] = useState("")
   return (
-    <section className='search-section'>
+    <section className='margin-0 padding-0 width-100vw'>
         <p>What Do you want to know?
             <button className="surprise">Surprise Me!</button>
         </p>
         <div className="input-container">
             <input
-                value={}
+                value={""}
                 placeholder="Suggest some nutricious food during pregnancy?"
                 onChange={""}
             />
@@ -20,7 +20,7 @@ const Chatbot = () => {
         <div className="search-results">
             <div key={""}>
                 <p className="answer">
-                    
+
                 </p>
             </div>
         </div>
