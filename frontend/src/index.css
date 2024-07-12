@@ -52,3 +52,14 @@
         @apply text-[16px] leading-7 mt-3;
     }
 }
+
+.str-video {
+    background-color: #272a30;
+    color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    max-width: 100%;
+  }

@@ -15,7 +15,15 @@ export default {
       boxShadow: {
         panelShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;",
       },
+      aspectRatio: {
+        '3/2': [3, 2],
+      },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
