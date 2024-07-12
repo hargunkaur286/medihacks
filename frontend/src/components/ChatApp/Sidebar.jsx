@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { IconButton } from '@mui/material';
 import AccountCircleIcon from "@mui/icons-material/AccountCircleRounded"
 import PersonAddIcon from "@mui/icons-material/PersonAddAltRounded"
@@ -9,6 +9,23 @@ import SearchIcon from "@mui/icons-material/Search"
 import ConversationItem from './ConversationItem';
 
 const Sidebar = () => {
+  const [conversation, setConversation] = useState([
+    {
+      name: 'Test#1',
+      lastMessage: 'LastMessage#1',
+      timeStamp: 'today'
+    },
+    {
+      name: 'Test#2',
+      lastMessage: 'LastMessage#2',
+      timeStamp: 'today'
+    },
+    {
+      name: 'Test#3',
+      lastMessage: 'LastMessage#3',
+      timeStamp: 'today'
+    },
+  ])
   return (
     <>
       <div className='flex flex-col h-full'>
@@ -44,7 +61,10 @@ const Sidebar = () => {
         </div>
 
         <div className='bg-white border-r-2 pt-1 pb-2 pr-2 pl-2 rounded-xl m-2 flex-grow'>
-          <ConversationItem />
+          {conversation.map((conversation) => {
+            return <ConversationItem props={conversation} />
+          })}
+          
         </div>
       </div>
     </>
