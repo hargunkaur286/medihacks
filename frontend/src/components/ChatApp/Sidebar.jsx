@@ -62,7 +62,7 @@ const Sidebar = () => {
 
         <div className='bg-white border-r-2 pt-1 pb-2 pr-2 pl-2 rounded-xl m-2 flex-grow'>
           {conversation.map((conversation) => {
-            return <ConversationItem props={conversation} />
+            return <ConversationItem props={conversation} key={conversation.name} />
           })}
           
         </div>
