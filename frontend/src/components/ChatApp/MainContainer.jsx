@@ -1,6 +1,8 @@
 import React from 'react'
 import ChatArea from './ChatArea'
+import CreateGroups from './CreateGroups';
 import Sidebar from './Sidebar'
+import Welcome from './Welcome';
 
 const MainContainer = () => {
   const chatAreaProps = {
@@ -13,7 +15,9 @@ const MainContainer = () => {
         <Sidebar />
       </div>
       <div className="w-[70%] h-full">
-        <ChatArea props={chatAreaProps} />
+        {/* <ChatArea props={chatAreaProps} /> */}
+        {/* <Welcome /> */}
+        <CreateGroups/>
       </div>
     </div>
   )

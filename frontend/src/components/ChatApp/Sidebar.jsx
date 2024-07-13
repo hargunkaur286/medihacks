@@ -53,10 +53,13 @@ const Sidebar = () => {
         </div>
         </div >
             
-        <div className='bg-white border-r-2 pt-1 pb-1 pr-2 pl-2 rounded-xl m-2 flex justify-around'>
-          <input placeholder='search'/>
-          <IconButton>
-          <SearchIcon />
+        <div className='bg-white border-r-2 p-2 rounded-xl m-2 flex items-center'>
+          <input 
+            placeholder='Search'
+            className='flex-grow rounded-xl p-2 border border-gray-300 '
+          />
+          <IconButton className='ml-2'>
+            <SearchIcon />
           </IconButton>
         </div>
 
