@@ -11,6 +11,7 @@ import {
   useCallStateHooks,
   ParticipantView,
 } from '@stream-io/video-react-sdk';
+import '@stream-io/video-react-sdk/dist/css/styles.css';
 
 const apiKey = 'mmhfdzb5evj2';
 const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiV2VkZ2VfQW50aWxsZXMiLCJpc3MiOiJodHRwczovL3Byb250by5nZXRzdHJlYW0uaW8iLCJzdWIiOiJ1c2VyL1dlZGdlX0FudGlsbGVzIiwiaWF0IjoxNzIwNTQzODQ3LCJleHAiOjE3MjExNDg2NTJ9.EdQlc_Cfk-5xWSkJf0GAX3k3yHXmAJOnoPz2G0q7QW4';
@@ -63,7 +64,7 @@ const Call = () => {
         </StreamCall>
       </StreamVideo>
     ) : (
-      <div className="flex items-center justify-center h-screen">
+      <div style={styles.loadingContainer}>
         Loading...
       </div>
     )
@@ -76,11 +77,11 @@ export const MyUILayout = () => {
   const callingState = useCallCallingState();
 
   if (callingState !== CallingState.JOINED) {
-    return <div className="flex items-center justify-center h-full">Loading...</div>;
+    return <div style={styles.loadingFullScreen}>Loading...</div>;
   }
 
   return (
-    <StreamTheme className="relative bg-gray-900 text-white h-full w-full flex flex-col">
+    <StreamTheme style={styles.streamTheme}>
       <SpeakerLayout participantsBarPosition='bottom' />
       <CallControls />
     </StreamTheme>
@@ -90,9 +91,9 @@ export const MyUILayout = () => {
 export const MyParticipantList = (props) => {
   const { participants } = props;
   return (
-    <div className="flex flex-row gap-2 w-full">
+    <div style={styles.participantList}>
       {participants.map((participant) => (
-        <div key={participant.sessionId} className="w-full aspect-w-3 aspect-h-2">
+        <div key={participant.sessionId} style={styles.participantView}>
           <ParticipantView 
             muteAudio
             participant={participant}
@@ -106,20 +107,53 @@ export const MyParticipantList = (props) => {
 export const MyFloatingLocalParticipant = (props) => {
   const { participant } = props;
   return (
-    <div
-      style={{
-        position: 'absolute',
-        top: '15px',
-        left: '15px',
-        width: '240px',
-        height: '100vw',
-        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 10px 3px',
-        borderRadius: '12px',
-      }}
-    >
+    <div style={styles.floatingParticipant}>
       {participant && <ParticipantView muteAudio participant={participant} />}
     </div>
   );
+};
+
+const styles = {
+  loadingContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+  },
+  loadingFullScreen: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+  },
+  streamTheme: {
+    position: 'relative',
+    backgroundColor: '#272a30',
+    color: '#ffffff',
+    height: '100vh',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  participantList: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '8px',
+    width: '100%',
+  },
+  participantView: {
+    width: '100%',
+    aspectRatio: '3 / 2',
+  },
+  floatingParticipant: {
+    position: 'absolute',
+    top: '15px',
+    left: '15px',
+    width: '240px',
+    height: '135px',
+    boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 10px 3px',
+    borderRadius: '12px',
+  },
 };
 
 export default Call;
