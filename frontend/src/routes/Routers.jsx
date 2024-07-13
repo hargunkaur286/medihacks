@@ -10,6 +10,7 @@ import DoctorDetails from '../pages/Doctors/DoctorDetails'
 import {Routes, Route} from 'react-router-dom'
 import ChatApp from '../pages/ChatApp'
 import Call from '../pages/Call'
+import Blogs from '../pages/Blogs'
 
 const Routers = () => {
   return (
@@ -24,6 +25,7 @@ const Routers = () => {
       <Route path="/services" element = {<Services/>} />
       <Route path="/chat" element = {<ChatApp/>} />
       <Route path="/call" element = {<Call />} />
+      <Route path="/blogs" element = {<Blogs/>} />
     </Routes>
   )
 }
