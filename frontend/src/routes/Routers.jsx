@@ -12,6 +12,8 @@ import ChatApp from '../pages/ChatApp'
 import Call from '../pages/Call'
 import Blogs from '../pages/Blogs'
 import Videos from '../pages/Videos'
+import MaternityCalendar from '../pages/MaternityCalendar'
+import WeekDetail from '../components/WeekDetail/WeekDetail'
 
 const Routers = () => {
   return (
@@ -28,6 +30,8 @@ const Routers = () => {
       <Route path="/call" element = {<Call />} />
       <Route path="/blogs" element = {<Blogs/>} />
       <Route path="/videos" element = {<Videos />} />
+      <Route path="/maternity-calendar" element={<MaternityCalendar />} />
+      <Route path="/week/:weekNumber" element={<WeekDetail />} />
     </Routes>
   )
 }
