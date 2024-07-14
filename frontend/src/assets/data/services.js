@@ -34,13 +34,6 @@ const services = [
     textColor: "#FEB60D",
     link: "/call",
   },
-  {
-    name: "Personalized AI Support",
-    desc: "Benefit from personalized AI support that provides tailored information, reminders, and recommendations based on your pregnancy journey.",
-    bgColor: "rgba(151, 113, 255, .2)",
-    textColor: "#9771FF",
-    link: "/personalized-ai-support",
-  },
 ];
 
 export default services;

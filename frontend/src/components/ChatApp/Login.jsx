@@ -127,14 +127,9 @@ const Login = () => {
                 }
               }}
             />
-            <Button
-              variant="outlined"
-              color="secondary"
-              onClick={loginHandler}
-              className="w-full mt-4"
-            >
-              Login
-            </Button>
+            <button className="bg-primaryColor py-2 px-6 text-gray-50 font-[600] h-[44px] flex items-center justify-center rounded-[50px]" onClick={loginHandler}>
+                Login
+            </button>
             <p className="mt-4">
               Don't have an Account?{" "}
               <span
@@ -196,14 +191,9 @@ const Login = () => {
                 }
               }}
             />
-            <Button
-              variant="outlined"
-              color="secondary"
-              onClick={signUpHandler}
-              className="w-full mt-4"
-            >
+            <button className="bg-primaryColor py-2 px-6 text-gray-50 font-[600] h-[44px] flex items-center justify-center rounded-[50px]" onClick={signUpHandler}>
               Sign Up
-            </Button>
+            </button>
             <p className="mt-4">
               Already have an Account?{" "}
               <span
