@@ -7,6 +7,7 @@ import AddCircleIcon from "@mui/icons-material/AddCircleRounded"
 import NightlightIcon from "@mui/icons-material/NightlightRounded"
 import SearchIcon from "@mui/icons-material/Search"
 import ConversationItem from './ConversationItem';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
   const [conversation, setConversation] = useState([
@@ -25,7 +26,8 @@ const Sidebar = () => {
       lastMessage: 'LastMessage#3',
       timeStamp: 'today'
     },
-  ])
+  ]);
+  const navigate = useNavigate();
   return (
     <>
       <div className='flex flex-col h-full'>
@@ -37,13 +39,13 @@ const Sidebar = () => {
           </IconButton>
           </div>
           <div>
-          <IconButton>
+          <IconButton onClick={() => {navigate('users')}}>
             <PersonAddIcon />
-          </IconButton>
-          <IconButton>
+          </IconButton >
+          <IconButton onClick={() => {navigate('groups')}}>
             <GroupAddIcon />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={() => {navigate('create-groups')}}>
             <AddCircleIcon />
           </IconButton>
           <IconButton>
@@ -65,7 +67,7 @@ const Sidebar = () => {
 
         <div className='bg-white border-r-2 pt-1 pb-2 pr-2 pl-2 rounded-xl m-2 flex-grow'>
           {conversation.map((conversation) => {
-            return <ConversationItem props={conversation} key={conversation.name} />
+            return <ConversationItem props={conversation} key={conversation.name}  />
           })}
           
         </div>

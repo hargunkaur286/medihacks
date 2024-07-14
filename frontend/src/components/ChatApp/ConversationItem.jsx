@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const ConversationItem = ({ props }) => {
+    const navigate = useNavigate();
     return (
-        <div className='bg-white border-r-2 pt-1 pb-2 pr-2 pl-2 rounded-xl m-2 flex-grow'>
+        <div className='bg-white border-r-2 pt-1 pb-2 pr-2 pl-2 rounded-xl m-2 flex-grow hover:bg-slate-200 transition-colors duration-200' onClick={() => {navigate('chat')}}>
             <div className="flex align-center">
                 <div>
                 <p className="flex justify-center items-center bg-[#d9d9d9] text-white font-bold text-2xl h-8 w-8 p-0.5 rounded-full self-center mr-5">{props.name[0]}</p>

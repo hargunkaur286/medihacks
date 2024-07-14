@@ -4,8 +4,17 @@ import { IconButton } from "@mui/material"
 import SendIcon from "@mui/icons-material/Send"
 import MessageOthers from './MessageOthers'
 import MessageSelf from './MessageSelf'
+import { useState } from 'react'
 
-const ChatArea = ({ props }) => {
+const ChatArea = () => {
+    const [conversations, setConversations] = useState([
+        {
+            name: 'John Doe',
+            lastMessage: "message",
+            timeStamp: 'today'
+        }
+    ]);
+      var props = conversations[0];
     return (
         <div className='flex flex-col h-full'>
 

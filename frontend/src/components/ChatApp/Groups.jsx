@@ -2,26 +2,26 @@ import React from 'react';
 import { IconButton } from '@mui/material';
 import SearchIcon from "@mui/icons-material/Search";
 
-const UserGroups = () => {
+const Groups = () => {
   const testUsers = [
-    'Test User 1',
-    'Test User 2',
-    'Test User 3',
-    'Test User 4',
-    'Test User 5',
-    'Test User 6',
-    'Test User 7',
-    'Test User 7',
-    'Test User 7',
-    'Test User 7',
-    'Test User 7',
+    'Test Group 1',
+    'Test Group 2',
+    'Test Group 3',
+    'Test Group 4',
+    'Test Group 5',
+    'Test Group 6',
+    'Test Group 7',
+    'Test Group 8',
+    'Test Group 9',
+    'Test Group 10',
+    'Test Group 11',
   ];
 
   return (
     <div className='flex flex-col h-full'>
       {/* Online Users Header */}
       <div className='flex items-center gap-2 rounded-xl border-b-2 bg-white m-2 p-4'>
-        <span className='font-bold text-lg'>Online Users</span>
+        <span className='font-bold text-lg'>Available Groups</span>
       </div>
 
       {/* Search Bar */}
@@ -50,4 +50,4 @@ const UserGroups = () => {
   );
 };
 
-export default UserGroups;
+export default Groups;
