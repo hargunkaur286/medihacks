@@ -33,7 +33,7 @@ const Groups = () => {
     };
 
     axios
-      .get("http://localhost:8080/chat/fetchGroups", config)
+      .get("https://medihacks-five.vercel.app/chat/fetchGroups", config)
       .then((response) => {
         console.log("Group Data from API ", response.data);
         setGroups(response.data);

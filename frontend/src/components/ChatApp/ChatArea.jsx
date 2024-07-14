@@ -28,7 +28,7 @@ const ChatArea = () => {
     };
     axios
       .post(
-        "http://localhost:8080/message/",
+        "https://medihacks-five.vercel.app/message/",
         {
           content: messageContent,
           chatId: chat_id,
@@ -48,7 +48,7 @@ const ChatArea = () => {
       },
     };
     axios
-      .get(`http://localhost:8080/message/${chat_id}`, config)
+      .get(`https://medihacks-five.vercel.app/message/${chat_id}`, config)
       .then(({ data }) => {
         setAllMessages(data);
         setLoaded(true);

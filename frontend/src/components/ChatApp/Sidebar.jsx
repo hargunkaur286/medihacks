@@ -33,7 +33,7 @@ const Sidebar = () => {
       },
     };
 
-    axios.get("http://localhost:8080/chat/", config).then((response) => {
+    axios.get("https://medihacks-five.vercel.app/chat/", config).then((response) => {
       setConversations(response.data);
     });
   }, [refresh, user.token]);

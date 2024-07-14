@@ -28,7 +28,7 @@ const UserGroups = () => {
         Authorization: `Bearer ${userData.data.token}`,
       },
     };
-    axios.get("http://localhost:8080/user/fetchUsers", config).then((data) => {
+    axios.get("https://medihacks-five.vercel.app/user/fetchUsers", config).then((data) => {
       setUsers(data.data);
     });
   }, [refresh, userData.data.token]);
@@ -78,7 +78,7 @@ const UserGroups = () => {
                   },
                 };
                 axios.post(
-                  "http://localhost:8080/chat/",
+                  "https://medihacks-five.vercel.app/chat/",
                   {
                     userId: user._id,
                   },

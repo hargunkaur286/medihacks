@@ -27,7 +27,7 @@ const Login = () => {
         },
       };
       const response = await axios.post(
-        "http://localhost:8080/user/login/",
+        "https://medihacks-five.vercel.app/user/login/",
         data,
         config
       );
@@ -52,7 +52,7 @@ const Login = () => {
         },
       };
       const response = await axios.post(
-        "http://localhost:8080/user/register/",
+        "https://medihacks-five.vercel.app/user/register/",
         data,
         config
       );
