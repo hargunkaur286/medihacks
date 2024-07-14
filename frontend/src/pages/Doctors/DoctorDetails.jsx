@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import doctorImg from "../../assets/images/doctor-img02.png"
 import starIcon from '../../assets/images/Star.png'
 import DoctorAbout from './DoctorAbout'
-import FeedBack from './FeedBack'
 
 const DoctorDetails = () => {
 
@@ -45,13 +44,13 @@ const DoctorDetails = () => {
                 About
               </button>
 
-              <button 
+              {/* <button 
                 onClick={() => setTab("feedback")}
                 className={`${tab === "feedback" && 'border-b border-solid border-primaryColor'} py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}>
                 Feedback
-              </button>
+              </button> */}
             </div>
-
+{/* 
             <div className='mt-[50px]'>
               {
                 tab === "about" && <DoctorAbout />
@@ -59,7 +58,7 @@ const DoctorDetails = () => {
               {
                 tab === "feedback" && <FeedBack />
               }
-            </div>
+            </div> */}
           </div>
         </div>
 
