@@ -2,26 +2,11 @@ import { useEffect, useRef } from 'react';
 import React from 'react'
 import logo from "../../assets/images/logo.png"
 import userImg from "../../assets/images/avatar-icon.png"
-import {NavLink, Link} from "react-router-dom";
-import {BiMenu} from "react-icons/bi"
+import { NavLink, Link } from "react-router-dom";
+import { BiMenu } from "react-icons/bi"
 
 const navLinks = [
-  {
-    path: '/home',
-    display: 'Home'
-  },
-  {
-    path: '/doctors',
-    display: 'Find a Doctor'
-  },
-  {
-    path: '/services',
-    display: 'Services'
-  },
-  {
-    path: '/contact',
-    display: 'Contact'
-  }
+
 ]
 
 const Header = () => {
@@ -31,10 +16,10 @@ const Header = () => {
 
   const handleStickyHeader = () => {
     window.addEventListener('scroll', () => {
-      if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         headerRef.current.classList.add('sticky__header')
       }
-      else{
+      else {
         headerRef.current.classList.remove('sticky__header')
       }
     })
@@ -47,14 +32,16 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <div>
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="Logo" />
+            </Link>
           </div>
-
-          <div className="navigation" ref = {menuRef} onClick={toggleMenu}>
+          
+          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <ul className="menu flex items-center gap-[2.7rem]">
               {
-                navLinks.map((link,index) => <li key={index}>
-                  <NavLink to={link.path} className={navClass => navClass.isActive 
+                navLinks.map((link, index) => <li key={index}>
+                  <NavLink to={link.path} className={navClass => navClass.isActive
                     ? "text-primaryColor text-[16px] leading-7 font-[600]"
                     : "text-textColor text-[16px] leading-7 font-[500]hover:text-primaryColor"}
                   >
@@ -68,9 +55,9 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className='hidden'>
               <Link to="/">
-                  <figure className='w-[35px] h-[35px] rounded-full cursor-auto'>
-                    <img src={userImg} className="w-full rounded-full" />
-                  </figure>
+                <figure className='w-[35px] h-[35px] rounded-full cursor-auto'>
+                  <img src={userImg} className="w-full rounded-full" />
+                </figure>
               </Link>
             </div>
 

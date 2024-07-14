@@ -1,43 +1,37 @@
 import React from 'react';
 import aboutImg from "../../assets/images/about.png";
-import aboutCardImg from "../../assets/images/about-card.png";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const About = () => {
-  return (
-    <section>
-        <div className="container">
-            <div className="flex justify-between gap-[50px] lg:gap-[130px] xl:gap-0 flex-col lg:flex-row">
-                <div className="relative w-3/4 lg:w-1/2 xl:w-[770px] z-10 order-2 lg:order-1">
-                    <img src={aboutImg} alt="" />
-                    <div className="absolute z-20 bottom-4 w-[200px] md:w-[300px] right-[-30px] md:right-[-7%] lg:right-[22%]">
-                        <img src={aboutCardImg} alt="" />
+    return (
+        <section>
+            <div className="container">
+                <div className="flex flex-col lg:flex-row items-center justify-around gap-[50px] lg:gap-[130px] xl:gap-0">
+                    <div className="w-full lg:w-1/2 xl:w-[670px] order-1 lg:order-2 text-center lg:text-left">
+                        <h2 className="heading">
+                            Track Your Pregnancy Journey
+                        </h2>
+                        <p className="text__para">
+                            Stay informed and prepared throughout your pregnancy with our comprehensive Maternity Calendar. For 30 years, we have been dedicated to providing top-notch care and support. Our Maternity Calendar offers week-by-week information and guidance, ensuring you know what to expect at every stage. Explore essential tips, health advice, and developmental milestones, all tailored to your unique journey.
+                        </p>
+
+                        <p className="text__para mt-[30px]">
+                            Stay on top of your health and your baby's development with our expertly curated resources. Click the button below to access your personalized Maternity Calendar and start your journey to a healthy, informed pregnancy.
+                        </p>
+                        <Link to="/maternity-calendar">
+                            <button className="btn">
+                                Learn More
+                            </button>
+                        </Link>
+                    </div>
+                    <div className="relative w-full lg:w-1/2 xl:w-[770px] z-10 order-2 lg:order-1 flex justify-center">
+                        <img src={aboutImg} className="w-80" />
                     </div>
                 </div>
-
-                <div className="w-full lg:w-1/2 xl:w-[670px] order-1 lg:order-2">
-                    <h2 className="heading">
-                        Proud to be one of the nation's best
-                    </h2>
-                    <p className="text__para">
-                        For 30 years in a row, US News and World Report has recognized us as one of hte best public hospitals in the Nation and #1 in Texas. Lorum ipsum dolor sit amert jnjkrnfjknvr kjrtnun hjtrn trnj tru 
-                    </p>
-
-                    <p className="text__para mt-[30px]">
-                        Our best is something we stirve for each day Report has recognized us as one of hte best public hospitals in the Nation and #1 in Texas. Lorum ipsum dolor sit amert jnjkrnfjknvr kjrtnun hjtrn trnj tru 
-                    </p>
-
-                    <Link to="/">
-                        <button className="btn">
-                            Learn More
-                        </button>
-                    </Link>
-                </div>
-
             </div>
-        </div>
-    </section>
-  )
+
+        </section>
+    )
 }
 
 export default About

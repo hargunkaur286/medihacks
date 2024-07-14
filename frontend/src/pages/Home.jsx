@@ -1,7 +1,5 @@
 import React from 'react'
 import heroImg01 from "../assets/images/hero-img01.png"
-import heroImg02 from "../assets/images/hero-img02.png"
-import heroImg03 from "../assets/images/hero-img03.png"
 import icons1 from "../assets/images/icon01.png"
 import icons2 from "../assets/images/icon02.png"
 import icons3 from "../assets/images/icon03.png"
@@ -9,8 +7,7 @@ import FeatureImg from "../assets/images/feature-img.png"
 import videoIcon from "../assets/images/video-icon.png"
 import avatarIcon from "../assets/images/avatar-icon.png"
 import faqimg from "../assets/images/faq-img.png"
-import {Link} from 'react-router-dom'
-import { BiRightArrowAlt } from "react-icons/bi";
+import { Link } from 'react-router-dom'
 import About from '../components/About/About'
 import ServiceList from '../components/Services/ServiceList'
 import DoctorList from '../components/Doctors/DoctorList'
@@ -26,13 +23,13 @@ const Home = () => {
             <div>
               <div className='lg:w-[570px]'>
                 <h1 className='text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px]'>
-                  We help patients live a healthy, longer life.
+                  Empowering Mothers for a Healthier Journey
                 </h1>
                 <p className="text__para">
-                  Lorem ipsum dorem sit amet consectetur Lorem ipsum dorem sit amet consecteturLorem ipsum dorem sit amet consectetur Lorem ipsum dorem sit amet consectetur Lorem ipsum dorem sit amet consectetur Lorem ipsum dorem sit amet consectetur Lorem ipsum dorem sit amet consectetur
+                  Discover a comprehensive maternity support app designed to ensure a healthy and joyful journey for expecting mothers. Stay connected with your doctor through video calls and access tailored content to guide you every step of the way. We are committed to helping you live a healthy, longer life.
                 </p>
                 <button className="btn">
-                  Request an Appointment
+                  Chat Now
                 </button>
               </div>
 
@@ -58,7 +55,7 @@ const Home = () => {
 
                   </span>
                   <p className="text__para">
-                    Clinic Locations
+                    Accessible Locations Globally
                   </p>
                 </div>
 
@@ -79,11 +76,7 @@ const Home = () => {
 
             <div className='flex gap-[30px] justify-end'>
               <div>
-                <img src={heroImg01} alt="" />
-              </div>
-              <div className='mt-[30px]'>
-                <img src={heroImg02} alt="" className='w-full mb-[30px]' />
-                <img src={heroImg03} alt="" className='w-full' />
+                <img src={heroImg01} className="rounded-xl" />
               </div>
             </div>
           </div>
@@ -112,12 +105,8 @@ const Home = () => {
                   Find a Doctor
                 </h2>
                 <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>
-                  World-class care for everyone. Our health system offers unmatched, expert health care. From the lab to the clinic. 
+                  Connect with experienced maternity specialists dedicated to providing personalized care and support. Our network of experts is here to guide you through every stage of your pregnancy.
                 </p>
-
-                <Link to='/doctors' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
-                  <BiRightArrowAlt className=" group-hover:text-white w-6 h-5" />
-                </Link>
               </div>
             </div>
 
@@ -128,15 +117,12 @@ const Home = () => {
 
               <div className='mt-[30px]'>
                 <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>
-                  Find a Location
+                  Virtual Consultations
                 </h2>
                 <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>
-                  World-class care for everyone. Our health system offers unmatched, expert health care. From the lab to the clinic. 
-                </p>
+                  Access top-notch maternity care from the comfort of your home. Our app connects you with healthcare professionals for virtual checkups, consultations, and advice, ensuring you receive the best care without needing to visit a clinic.
 
-                <Link to='/doctors' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
-                  <BiRightArrowAlt className=" group-hover:text-white w-6 h-5" />
-                </Link>
+                </p>
               </div>
             </div>
 
@@ -147,15 +133,11 @@ const Home = () => {
 
               <div className='mt-[30px]'>
                 <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>
-                  Book and Appointment
+                  Book an Appointment
                 </h2>
                 <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>
-                  World-class care for everyone. Our health system offers unmatched, expert health care. From the lab to the clinic. 
+                  Schedule virtual appointments with your healthcare providers effortlessly. Our app makes it simple to find the right time for online consultations, ensuring you receive the care and attention you need.
                 </p>
-
-                <Link to='/doctors' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none'>
-                  <BiRightArrowAlt className="group-hover:text-white w-6 h-5" />
-                </Link>
               </div>
             </div>
 
@@ -176,7 +158,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        
+
         <ServiceList />
 
 
@@ -188,22 +170,22 @@ const Home = () => {
           <div className="flex items-center justify-between flex-col lg:flex-row">
             <div className='xl:w-[670px]'>
               <h2 className="heading">
-                Get virtual meeting <br/>
+                Get virtual meeting <br />
                 Anytime.
               </h2>
 
               <ul className="pl-4">
                 <li className="text__para">
-                  1. Schedule the appointment directly.
+                  1. Schedule a virtual consultation with your healthcare provider.
                 </li>
                 <li className="text__para">
-                  2. Search for your physician here, and contact their office.
+                  2. Connect with a maternity specialist through our real-time chat feature.
                 </li>
                 <li className="text__para">
-                  3. View our physicians who are accepting new patients, use the online scheduling tool to select an appointment time.
+                  3. Use the personalized AI assistant to get tailored advice and reminders for your pregnancy journey.
                 </li>
               </ul>
-              <Link to="/">
+              <Link to="/call">
                 <button className="btn">
                   Learn More
                 </button>
@@ -247,7 +229,7 @@ const Home = () => {
       {/* doctors */}
       <section>
         <div className="container">
-        <div className='xl:w-[470px] mx-auto'>
+          <div className='xl:w-[470px] mx-auto'>
             <h2 className='heading text-center'>
               Our great doctors
             </h2>
@@ -262,10 +244,11 @@ const Home = () => {
       {/* faq section */}
       <section>
         <div className="container">
-          <div className="flex justify-between gap-[50px] lg:gap-0">
-            <div className='w-1/2 hidden md:block'>
-              <img src={faqimg} alt="" />
+          <div className="flex justify-around gap-[50px] lg:gap-0">
+            <div className='w-80 hidden md:flex justify-center items-center'>
+              <img src={faqimg} className="rounded-xl" />
             </div>
+
 
             <div className="w-full md:w-1/2">
               <h2 className="heading">
