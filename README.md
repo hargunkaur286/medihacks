@@ -5,17 +5,17 @@ https://youtu.be/JXpKInAlQqg
 
 1. Clone the repository into your local machine
 2. Move into the "frontend folder"
-   ''' cd frontend
-       npm install
-       npm run dev '''
+   ``` cd frontend ```
+   ``` npm install ```
+   ``` npm run dev ```
 3. Move into the "backend folder"
-   ''' cd backend
-       npm install
-       npm run dev '''
+   ``` cd backend ```
+   ``` npm install ```
+   ```npm run dev ```
 4. Create a ".env" file in the root of the backend folder and you can add following credentials:
-   ''' JWT_SECRET=prepbytes
-       MONGO_URI=mongodb+srv://hargunkaur:fiverr1234@livechat.7ghtemw.mongodb.net/?retryWrites=true&w=majority&appName=LiveChat
-       PORT=8080 '''
+   ``` JWT_SECRET=prepbytes ```
+   ``` MONGO_URI=mongodb+srv://hargunkaur:fiverr1234@livechat.7ghtemw.mongodb.net/?retryWrites=true&w=majority&appName=LiveChat ```
+   ``` PORT=8080 ```
 5. Make sure that the backend is running on port 8080
 6. And Frontend is running on port 5173
 7. You can use some of the test credentials for logging in the chat app, following are usernames and passwords
