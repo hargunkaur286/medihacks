@@ -30,10 +30,15 @@ https://youtu.be/JXpKInAlQqg
 8. Make sure that the backend is running on port 8080
 9. And Frontend is running on port 5173
 10. You can use some of the test credentials for logging in the chat app, following are usernames and passwords
+    
    a. test  123
+   
    b. hargun  1234
+   
    c. doctor1 1234
+   
    d. hargunkaur 1234
+   
 
 ## What is MEDIHACKS?
 
